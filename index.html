@@ -1,170 +1,340 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Corporation — Welcome</title>
-  <meta name="description" content="A clean starter HTML page for the Corporation project." />
-  <style>
-    :root{
-      --bg:#f7f9fc; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
-      --radius:12px; --maxw:1100px; --gap:24px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg, var(--bg), #eef3fb 70%); color:#0f172a; -webkit-font-smoothing:antialiased;
-    }
-    .container{max-width:var(--maxw); margin:36px auto; padding:0 20px;}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:600}
-    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
-    nav{display:flex;gap:14px;align-items:center}
-    a{color:inherit;text-decoration:none}
-    .btn{background:var(--accent);color:#fff;padding:8px 14px;border-radius:10px;font-weight:600}
-    main{display:grid;grid-template-columns:1fr 360px;gap:var(--gap);align-items:start}
-    @media (max-width:900px){main{grid-template-columns:1fr} nav.desktop{display:none}}
-    .hero{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(12,20,40,0.06)}
-    h1{margin:0 0 8px;font-size:1.9rem;line-height:1.05}
-    p.lead{margin:0 0 18px;color:var(--muted)}
-    .features{display:grid;gap:12px;margin-top:8px}
-    .feature{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(15,23,42,0.03)}
-    .aside{position:sticky;top:28px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 4px 14px rgba(12,20,40,0.04)}
-    footer{margin-top:34px;padding:18px 0;text-align:center;color:var(--muted);font-size:.95rem}
-    form .row{display:flex;gap:10px;margin-bottom:10px}
-    input[type="text"], input[type="email"], textarea{
-      width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf6;background:#fbfdff;color:inherit;
-    }
-    textarea{min-height:100px;resize:vertical}
-    .muted{color:var(--muted);font-size:.95rem}
-    .small{font-size:.9rem;color:var(--muted)}
-    .nav-toggle{display:none}
-    @media (max-width:900px){.nav-toggle{display:inline-flex}}
-  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Summary</title>
+<style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #edf2f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            max-width: 980px;
+            margin: auto;
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .12);
+        }
+
+        .banner {
+            height: 6px;
+            background: #003366;
+        }
+
+        .content {
+            padding: 35px;
+            line-height: 1.5;
+            color: #222;
+        }
+
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .content td,
+        .content th {
+            padding: 12px;
+            border: 1px solid #d9dee5;
+        }
+
+        .content img {
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+        }
+
+        .note {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 20px;
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0
+            }
+
+            .wrapper {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+    
+body{background:#f3f5f7 !important;}
+.container,.resume,.card{max-width:900px;margin:24px auto;background:#fff;border-radius:12px;
+box-shadow:0 8px 24px rgba(0,0,0,.08);padding:28px;}
+img{max-width:100%;}
+h1,h2,h3{letter-spacing:.3px}
+section{margin-bottom:20px}
+
+body{background:#eef2f6!important;font-family:Georgia,serif;}
+.container,.resume,.card{
+max-width:900px;
+margin:28px auto;
+background:#fff;
+border:1px solid #c8b27a;
+border-top:6px solid #8b6b1f;
+border-radius:8px;
+box-shadow:0 10px 28px rgba(0,0,0,.08);
+padding:36px;
+}
+h1{font-size:2rem;text-align:center;color:#17365d}
+h2{color:#8b6b1f;border-bottom:1px solid #d8c48b;padding-bottom:6px}
+table{width:100%;border-collapse:collapse}
+td,th{padding:8px;vertical-align:top}
+
+/* Karnataka Govt / NIC inspired refinement */
+body{
+  background:#edf2f7!important;
+  font-family:"Segoe UI",Arial,sans-serif;
+  color:#222;
+}
+.container,.resume,.card{
+  max-width:960px;
+  margin:32px auto;
+  background:#fff;
+  border:1px solid #d3d9df;
+  border-top:8px solid #b58b1d;
+  border-bottom:4px solid #c62828;
+  border-radius:6px;
+  padding:40px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+h1{
+  text-align:center;
+  color:#0b4f8a;
+  font-weight:700;
+  margin-bottom:8px;
+}
+h2{
+  color:#0b4f8a;
+  border-left:5px solid #b58b1d;
+  padding-left:10px;
+  border-bottom:1px solid #d9d9d9;
+  padding-bottom:6px;
+  margin-top:26px;
+}
+p,li,td{line-height:1.65}
+table{width:100%;border-collapse:collapse}
+th{
+ background:#f5f7fa;
+}
+th,td{
+ border:1px solid #d8dde3;
+ padding:10px;
+}
+img{display:block}
+
+/* NIC Portal inspired */
+@page{size:A4;margin:14mm;}
+body{
+ background:#e9edf2!important;
+ font-family:Arial,Helvetica,sans-serif;
+}
+.container,.resume,.card{
+ max-width:960px;
+ margin:20px auto;
+ background:#fff;
+ border:1px solid #bfc8d2;
+ border-top:10px solid #005ea5;
+ border-bottom:6px solid #c28a00;
+ padding:42px;
+ border-radius:4px;
+ box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+h1{
+ text-transform:uppercase;
+ color:#003b70;
+ font-size:28px;
+ letter-spacing:.5px;
+ text-align:center;
+ border-bottom:2px solid #c28a00;
+ padding-bottom:10px;
+}
+h2{
+ color:#003b70;
+ background:#f5f8fb;
+ border-left:6px solid #005ea5;
+ padding:8px 12px;
+ font-size:18px;
+}
+table{
+ width:100%;
+ border-collapse:collapse;
+ margin-top:8px;
+}
+th{
+ background:#eef5fb;
+ font-weight:bold;
+}
+th,td{
+ border:1px solid #cfd8e3;
+ padding:10px 12px;
+}
+p,li{
+ line-height:1.7;
+ text-align:justify;
+}
+img{
+ image-rendering:auto;
+}
+@media print{
+ body{background:white!important;}
+ .container,.resume,.card{
+   box-shadow:none;
+   margin:0;
+   border:1px solid #888;
+ }
+}
+
+/* Premium official document refinement */
+:root{
+ --gov-blue:#0b4f8a;
+ --gov-gold:#b8860b;
+ --gov-red:#8c1d18;
+}
+body{background:#e6ebf1!important;}
+.container,.resume,.card{
+ background:#fff;
+ max-width:980px;
+ margin:24px auto;
+ padding:48px;
+ border:1px solid #bfc7d1;
+ border-top:12px solid var(--gov-blue);
+ border-bottom:6px solid var(--gov-red);
+ box-shadow:0 14px 36px rgba(0,0,0,.12);
+}
+h1{
+ text-transform:uppercase;
+ color:var(--gov-blue);
+ text-align:center;
+ font-size:30px;
+ font-weight:700;
+ margin-bottom:12px;
+ padding-bottom:12px;
+ border-bottom:3px solid var(--gov-gold);
+}
+h2,h3{
+ color:var(--gov-blue);
+ border-left:6px solid var(--gov-gold);
+ background:linear-gradient(to right,#f8fafc,#ffffff);
+ padding:8px 12px;
+}
+table{border-collapse:collapse}
+th{
+ background:#eef4fb;
+ color:#123;
+}
+th,td{
+ border:1px solid #c9d2dc;
+ padding:10px 12px;
+}
+p,li,td{font-size:15px;line-height:1.75}
+img{
+ display:block;
+ margin-left:auto;
+ margin-right:auto;
+ max-height:120px;
+}
+hr{
+ border:none;
+ border-top:1px solid #d4d4d4;
+ margin:28px 0;
+}
+@media print{
+ body{background:#fff!important;}
+ .container,.resume,.card{box-shadow:none;margin:0}
+}
+</style>
 </head>
 <body>
-  <div class="container" role="document">
-    <header>
-      <div class="brand" aria-label="Corporation">
-        <div class="logo" aria-hidden="true">C</div>
-        <div>
-          <div style="font-size:1rem">Corporation</div>
-          <div class="small muted" style="margin-top:2px">Starter project</div>
-        </div>
-      </div>
-
-      <nav aria-label="Main navigation">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleNav(this)">☰</button>
-        <div class="desktop" id="desktop-nav">
-          <a href="#about" class="small muted">About</a>
-          <a href="#features" class="small muted">Features</a>
-          <a href="#contact" class="small muted">Contact</a>
-          <a href="#" class="btn" style="margin-left:8px">Get started</a>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">A clean, responsive starter HTML file</h1>
-        <p class="lead">This page is accessible, mobile-friendly, and self-contained — ideal for prototypes, documentation, or a project homepage.</p>
-
-        <div id="features" class="features" aria-hidden="false">
-          <article class="feature">
-            <div style="font-weight:700;color:var(--accent);min-width:36px;text-align:center">✓</div>
-            <div>
-              <strong>Semantic markup</strong>
-              <div class="small muted">Uses header/main/footer and ARIA where helpful.</div>
-            </div>
-          </article>
-
-          <article class="feature">
-            <div style="font-weight:700;color:#0ea5a3;min-width:36px;text-align:center">⚡</div>
-            <div>
-              <strong>Responsive layout</strong>
-              <div class="small muted">Two-column desktop layout collapses to single column on small screens.</div>
-            </div>
-          </article>
-
-          <article class="feature">
-            <div style="font-weight:700;color:#f97316;min-width:36px;text-align:center">🔒</div>
-            <div>
-              <strong>Lightweight & self-contained</strong>
-              <div class="small muted">No external dependencies — single file with CSS and a tiny JS snippet.</div>
-            </div>
-          </article>
-        </div>
-
-        <section id="about" style="margin-top:18px">
-          <h2 style="font-size:1.05rem;margin:0 0 8px">About this file</h2>
-          <p class="muted small">You can edit the text, swap colors, or copy sections into your app. The contact form is non-functional by design — it demonstrates UI only.</p>
-        </section>
-      </section>
-
-      <aside class="aside" aria-labelledby="contact">
-        <div class="card" id="contact" role="region" aria-label="Contact">
-          <h3 style="margin-top:0">Contact</h3>
-          <p class="small muted">Send a quick message (demo only).</p>
-          <form onsubmit="submitDemo(event)" novalidate>
-            <div class="row">
-              <input type="text" name="name" placeholder="Your name" required aria-label="Your name" />
-            </div>
-            <div class="row">
-              <input type="email" name="email" placeholder="Email" required aria-label="Email address" />
-            </div>
-            <div style="margin-bottom:10px">
-              <textarea name="message" placeholder="Message" aria-label="Message"></textarea>
-            </div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <button type="submit" class="btn">Send</button>
-              <div id="form-status" class="muted small" aria-live="polite"></div>
-            </div>
-          </form>
-        </div>
-
-        <div class="card" style="margin-top:16px">
-          <h4 style="margin:0 0 8px">Quick links</h4>
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
-            <li><a href="#" class="small">Documentation</a></li>
-            <li><a href="#" class="small">Repository</a></li>
-            <li><a href="#" class="small">Issues</a></li>
-          </ul>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      <div class="small muted">© Corporation — Generated starter page • No external scripts</div>
-    </footer>
-  </div>
-
-  <script>
-    function toggleNav(btn){
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      // simple mobile menu toggle — for demo only
-      let mob = document.getElementById('mobile-nav');
-      if(!mob){
-        mob = document.createElement('div');
-        mob.id = 'mobile-nav';
-        mob.style.marginTop = '12px';
-        mob.innerHTML = '<a href="#about" style="display:block;padding:8px 0">About</a><a href="#features" style="display:block;padding:8px 0">Features</a><a href="#contact" style="display:block;padding:8px 0">Contact</a>';
-        document.querySelector('header').appendChild(mob);
-      } else {
-        mob.style.display = mob.style.display === 'none' ? 'block' : 'none';
-      }
-    }
-
-    function submitDemo(e){
-      e.preventDefault();
-      const status = document.getElementById('form-status');
-      status.textContent = 'Sending…';
-      setTimeout(()=> {
-        status.textContent = 'Thanks — message received (demo)';
-        e.target.reset();
-      }, 700);
-    }
-  </script>
+<div class="wrapper">
+<div class="banner"></div>
+<div class="content">
+<div>
+<p style="margin-top:12pt; margin-right:15pt; margin-left:15pt; text-align:center; font-size:24pt; background-color:#003366; -aw-outline-level:1"><span style="font-weight:bold; color:#ffffff">MYSORE C[...]
+<p style="margin-right:15pt; margin-left:15pt; text-align:center; font-size:24pt; background-color:#003366; -aw-outline-level:1"><img alt="" height="75" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQA[...]
+<p style="margin-right:15pt; margin-left:15pt; text-align:center; font-size:24pt; background-color:#003366; -aw-outline-level:1"><span style="font-weight:bold; color:#ffffff">Application Information P[...]
+<p style="margin:12pt 15pt; text-align:center; background-color:#003366"><span style="color:#ffffff">Citizen Services • Personal Information Summary</span></p>
+<h2 style="margin:22.5pt 22.5pt 14.95pt; text-align:center; page-break-inside:auto; page-break-after:auto; background-color:#ffffff"><span style="font-family:Arial; color:#000000">Application Summary<[...]
+<table cellpadding="0" cellspacing="0" style="width:100%; margin-left:22.5pt; border:0.75pt solid #cccccc; border-collapse:collapse">
+<tr>
+<td style="width:35%; border-right:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#f7f7f7">
+<p style="font-size:12pt"><span style="font-weight:bold">Name</span></p>
+</td>
+<td style="border-left:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#ffffff">
+<p style="font-size:12pt"><span>Sumalini</span><span><p style="margin-right:22.5pt; margin-left:22.5pt; margin-bottom:15pt; text-align:center; background-color:#ffffff"><img alt="Applicant Photo" heig[...]
+</td>
+</tr>
+<tr>
+<td style="width:35%; border-top:0.75pt solid #cccccc; border-right:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#f7f7f7">
+<p style="font-size:12pt"><span style="font-weight:bold">Address</span></p>
+</td>
+<td style="border-top:0.75pt solid #cccccc; border-left:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#ffffff">
+<p style="font-size:12pt"><span>Late John Christopher,</span><br/><span>#82 Logos Cottage,</span><br/><span>2nd Cross, 2nd Phase,</span><br/><span>Gayathripuram,</span><br/><span>Mysore P.O., Mysore �[...]
+</td>
+</tr>
+<tr>
+<td style="width:35%; border-top:0.75pt solid #cccccc; border-right:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#f7f7f7">
+<p style="font-size:12pt"><span style="font-weight:bold">Aadhaar Number</span></p>
+</td>
+<td style="border-top:0.75pt solid #cccccc; border-left:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#ffffff">
+<p style="font-size:12pt"><span>XXXX XXXX 9889</span></p>
+</td>
+</tr>
+<tr>
+<td style="width:35%; border-top:0.75pt solid #cccccc; border-right:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#f7f7f7">
+<p style="font-size:12pt"><span style="font-weight:bold">PAN Number</span></p>
+</td>
+<td style="border-top:0.75pt solid #cccccc; border-left:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#ffffff">
+<p style="font-size:12pt"><span>BPWPS****P</span></p>
+</td>
+</tr>
+<tr>
+<td style="width:35%; border-top:0.75pt solid #cccccc; border-right:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#f7f7f7">
+<p style="font-size:12pt"><span style="font-weight:bold">Date of Birth</span></p>
+</td>
+<td style="border-top:0.75pt solid #cccccc; border-left:0.75pt solid #cccccc; border-bottom:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#ffffff">
+<p style="font-size:12pt"><span>09/09/1973</span></p>
+</td>
+</tr>
+<tr>
+<td style="width:35%; border-top:0.75pt solid #cccccc; border-right:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#f7f7f7">
+<p style="font-size:12pt"><span style="font-weight:bold">Application Number</span></p>
+</td>
+<td style="border-top:0.75pt solid #cccccc; border-left:0.75pt solid #cccccc; padding:9pt 9.02pt; vertical-align:middle; background-color:#ffffff">
+<p style="font-size:12pt"><span>1710</span></p>
+<p style="font-size:12pt"><span style="-aw-import:ignore"> </span></p>
+</td>
+</tr>
+</table>
+<div align="center">
+<hr align="center" size="2" style="width:100%"/>
+</div>
+<p class="divSection1"><span>Note :</span><span> </span></p>
+<p class="divSection1"><span style="-aw-import:ignore"> </span></p>
+<p class="divSection1"><span>1. This application is not yet received payment. So the system will allocate the reserved site to the next citizen in the queue.</span><span> </span></p>
+<p class="divSection1"><span style="-aw-import:ignore"> </span></p>
+<p class="divSection1"><span>2. Because of the seniority gradation of the applicant we will extend the payment deadline to 7 working days.</span></p>
+<p class="divSection1"><span style="-aw-import:ignore"> </span></p>
+<p class="divSection1"><span>3. For extension of the payment, late payment penalty should be paid within 23-JUNE-2026 11:00 AM IST.</span></p>
+<p class="divSection1"><span style="-aw-import:ignore"> </span></p>
+<p class="divSection1"><span>4. If penalty payment is not received by the mentioned date and time system will automatically cancel the reservation and allocate to the next person in the queue.</span><[...]
+</div>
+</div>
+<div class="note">Note: For personal reference only.</div>
+</div>
 </body>
 </html>
