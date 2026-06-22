@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Corporation — Welcome</title>
+  <meta name="description" content="A clean starter HTML page for the Corporation project." />
+  <style>
+    :root{
+      --bg:#f7f9fc; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
+      --radius:12px; --maxw:1100px; --gap:24px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg, var(--bg), #eef3fb 70%); color:#0f172a; -webkit-font-smoothing:antialiased;
+    }
+    .container{max-width:var(--maxw); margin:36px auto; padding:0 20px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:600}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#4f46e5,#06b6d4);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav{display:flex;gap:14px;align-items:center}
+    a{color:inherit;text-decoration:none}
+    .btn{background:var(--accent);color:#fff;padding:8px 14px;border-radius:10px;font-weight:600}
+    main{display:grid;grid-template-columns:1fr 360px;gap:var(--gap);align-items:start}
+    @media (max-width:900px){main{grid-template-columns:1fr} nav.desktop{display:none}}
+    .hero{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(12,20,40,0.06)}
+    h1{margin:0 0 8px;font-size:1.9rem;line-height:1.05}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .features{display:grid;gap:12px;margin-top:8px}
+    .feature{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(15,23,42,0.03)}
+    .aside{position:sticky;top:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 4px 14px rgba(12,20,40,0.04)}
+    footer{margin-top:34px;padding:18px 0;text-align:center;color:var(--muted);font-size:.95rem}
+    form .row{display:flex;gap:10px;margin-bottom:10px}
+    input[type="text"], input[type="email"], textarea{
+      width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf6;background:#fbfdff;color:inherit;
+    }
+    textarea{min-height:100px;resize:vertical}
+    .muted{color:var(--muted);font-size:.95rem}
+    .small{font-size:.9rem;color:var(--muted)}
+    .nav-toggle{display:none}
+    @media (max-width:900px){.nav-toggle{display:inline-flex}}
+  </style>
+</head>
+<body>
+  <div class="container" role="document">
+    <header>
+      <div class="brand" aria-label="Corporation">
+        <div class="logo" aria-hidden="true">C</div>
+        <div>
+          <div style="font-size:1rem">Corporation</div>
+          <div class="small muted" style="margin-top:2px">Starter project</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleNav(this)">☰</button>
+        <div class="desktop" id="desktop-nav">
+          <a href="#about" class="small muted">About</a>
+          <a href="#features" class="small muted">Features</a>
+          <a href="#contact" class="small muted">Contact</a>
+          <a href="#" class="btn" style="margin-left:8px">Get started</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">A clean, responsive starter HTML file</h1>
+        <p class="lead">This page is accessible, mobile-friendly, and self-contained — ideal for prototypes, documentation, or a project homepage.</p>
+
+        <div id="features" class="features" aria-hidden="false">
+          <article class="feature">
+            <div style="font-weight:700;color:var(--accent);min-width:36px;text-align:center">✓</div>
+            <div>
+              <strong>Semantic markup</strong>
+              <div class="small muted">Uses header/main/footer and ARIA where helpful.</div>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div style="font-weight:700;color:#0ea5a3;min-width:36px;text-align:center">⚡</div>
+            <div>
+              <strong>Responsive layout</strong>
+              <div class="small muted">Two-column desktop layout collapses to single column on small screens.</div>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div style="font-weight:700;color:#f97316;min-width:36px;text-align:center">🔒</div>
+            <div>
+              <strong>Lightweight & self-contained</strong>
+              <div class="small muted">No external dependencies — single file with CSS and a tiny JS snippet.</div>
+            </div>
+          </article>
+        </div>
+
+        <section id="about" style="margin-top:18px">
+          <h2 style="font-size:1.05rem;margin:0 0 8px">About this file</h2>
+          <p class="muted small">You can edit the text, swap colors, or copy sections into your app. The contact form is non-functional by design — it demonstrates UI only.</p>
+        </section>
+      </section>
+
+      <aside class="aside" aria-labelledby="contact">
+        <div class="card" id="contact" role="region" aria-label="Contact">
+          <h3 style="margin-top:0">Contact</h3>
+          <p class="small muted">Send a quick message (demo only).</p>
+          <form onsubmit="submitDemo(event)" novalidate>
+            <div class="row">
+              <input type="text" name="name" placeholder="Your name" required aria-label="Your name" />
+            </div>
+            <div class="row">
+              <input type="email" name="email" placeholder="Email" required aria-label="Email address" />
+            </div>
+            <div style="margin-bottom:10px">
+              <textarea name="message" placeholder="Message" aria-label="Message"></textarea>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button type="submit" class="btn">Send</button>
+              <div id="form-status" class="muted small" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h4 style="margin:0 0 8px">Quick links</h4>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li><a href="#" class="small">Documentation</a></li>
+            <li><a href="#" class="small">Repository</a></li>
+            <li><a href="#" class="small">Issues</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="small muted">© Corporation — Generated starter page • No external scripts</div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleNav(btn){
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      // simple mobile menu toggle — for demo only
+      let mob = document.getElementById('mobile-nav');
+      if(!mob){
+        mob = document.createElement('div');
+        mob.id = 'mobile-nav';
+        mob.style.marginTop = '12px';
+        mob.innerHTML = '<a href="#about" style="display:block;padding:8px 0">About</a><a href="#features" style="display:block;padding:8px 0">Features</a><a href="#contact" style="display:block;padding:8px 0">Contact</a>';
+        document.querySelector('header').appendChild(mob);
+      } else {
+        mob.style.display = mob.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
+    function submitDemo(e){
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.textContent = 'Sending…';
+      setTimeout(()=> {
+        status.textContent = 'Thanks — message received (demo)';
+        e.target.reset();
+      }, 700);
+    }
+  </script>
+</body>
+</html>
